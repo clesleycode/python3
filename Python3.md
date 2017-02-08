@@ -63,7 +63,8 @@ $ python my_file.py
 	-	[5.4 Instance Methods](#instance)
 	-	[5.5 Class Methods](#class)
 	-	[5.6 Static Methods](#static)
-	-	[5.7 Exercise 5](#exercise5)
+	-	[5.7 Inheritance](#inheritance)
+	-	[5.8 Exercise 5](#exercise5)
 -	[6.0 More Goodies](#goodies)
 	- [6.1 Modules](#modules)
 	- [6.2 User Input](#input)
@@ -688,8 +689,52 @@ class Animal(object):
 Animal.boo() # = "BOO!"
 ```
 
+
+<a id="inheritance"></a>
+
+### 5.7 Inheritance
+
+Inheritance is used to indicate that one class will get most or all of its features from a parent class. 
+
+When you are doing this kind of specialization, there are three ways that the parent and child classes can interact:
+
+- Actions on the child imply an action on the parent.
+- Actions on the child override the action on the parent.
+- Actions on the child alter the action on the parent.
+
+Here I will show you the implicit actions that happen when you defi ne a function in the parent, but not in the child. 
+
+Here we have the Parent class:
+``` python
+class Parent(object):
+	def implicit(self):
+		print("PARENT implicit()")
+```
+
+Here, we define the Child class:
+``` python
+class Child(Parent):
+	pass
+```
+Now, we're just calling the two classes.
+``` python
+dad = Parent()
+son = Child()
+```
+Now, let's see what happens when we call the implicit methods on each:
+``` python
+dad.implicit()
+son.implicit()
+```
+And we get:
+``` 
+PARENT implicit()
+PARENT implicit()
+```
+Notice how even though I’m calling `son.implicit()` and the Child class doesn't have an `implicit` function defined, it still works and calls the one defined in Parent. This shows you that, if you put functions in a parent class, then all child classes will automatically get those features. 
+
 <a id="exercise5"></a>
-### 5.7 Exercise 5
+### 5.8 Exercise 5
 
 Write a class called `Human`.  It should have a constructor that takes in a height and weight (in inches and pounds respectively), and they should be stored in instance variables.
 
@@ -945,49 +990,6 @@ $ python sort.py
 Enter the string of numbers: 555987654321
 123455556789
 ```
-
-## 7.0 More on Computer Science
-
-### 7.1 Inheritance
-
-Inheritance is used to indicate that one class will get most or all of its features from a parent class. 
-
-When you are doing this kind of specialization, there are three ways that the parent and child classes can interact:
-
-- Actions on the child imply an action on the parent.
-- Actions on the child override the action on the parent.
-- Actions on the child alter the action on the parent.
-
-Here I will show you the implicit actions that happen when you defi ne a function in the parent, but not in the child. 
-
-Here we have the Parent class:
-``` python
-class Parent(object):
-	def implicit(self):
-		print("PARENT implicit()")
-```
-
-Here, we define the Child class:
-``` python
-class Child(Parent):
-	pass
-```
-Now, we're just calling the two classes.
-``` python
-dad = Parent()
-son = Child()
-```
-Now, let's see what happens when we call the implicit methods on each:
-``` python
-dad.implicit()
-son.implicit()
-```
-And we get:
-``` 
-PARENT implicit()
-PARENT implicit()
-```
-Notice how even though I’m calling `son.implicit()` and the Child class doesn't have an `implicit` function defined, it still works and calls the one defined in Parent. This shows you that, if you put functions in a parent class, then all child classes will automatically get those features. 
 ___________
 
 <a href="#top" class="top" id="additionalresources">Top</a>

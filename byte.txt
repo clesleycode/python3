@@ -1,0 +1,15 @@
+Python 101: Intro to Python with Data Science
+
+Day 1, 6:00-9:00pm:
+	Sections 1.0-4.0 
+		- Data Types & Operators
+		- Variables and Collections
+		- Control Flow
+		- Functions
+
+Day 2, 6:00-9:00pm:
+	Section 5.0 - 6.0:
+		- Classes & Object Oriented Programming
+		- Modules: Numpy, Pandas
+		- User Input
+		- List Comprehensions
