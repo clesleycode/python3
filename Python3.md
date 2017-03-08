@@ -1,8 +1,6 @@
 <a id="top"></a>
 # An Introduction to Python Programming
 
-Written and developed by [Matt Piccolella](mailto:matthew@adicu.com), modified for Python 3.5 by [Lesley Cordero](lc2958@columbia.edu).
-
 Credit to [Learn X in Y Minutes: X = Python][xy] and [Learn Python the Hardway][hardway].
 
 First, we'll go over [Git & Github](https://try.github.io/levels/1/challenges/1), followed by [iPython Notebook](https://ipython.org/install.html).
@@ -70,7 +68,8 @@ $ python my_file.py
 	- [6.2 User Input](#input)
 	- [6.3 Decorator Functions](#decorator)
 	- [6.4 pip/requirements.txt](#pip)
-	- [6.5 Exercise 6](#exercise6)
+	- [6.5 List Comprehensions](#listcomprehension)
+	- [6.6 Exercise 6](#exercise6)
 -   [Additional Resources](#additionalresources)
 
 
