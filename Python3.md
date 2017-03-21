@@ -3,8 +3,6 @@
 
 Credit to [Learn X in Y Minutes: X = Python][xy] and [Learn Python the Hardway][hardway].
 
-First, we'll go over [Git & Github](https://try.github.io/levels/1/challenges/1), followed by [iPython Notebook](https://ipython.org/install.html).
-
 <a href="#top" class="top" id="getting-started">Top</a>
 ## Getting Started
 
@@ -12,20 +10,6 @@ Before we start building our first web application, we must become familiar with
 
 ### What is Python?
 [Python][python] is a dynamic programming language that is similar to Perl, Ruby, and Java. It is known for its clear, readable syntax, its dynamic data types, and its usage in many different types of application development.
-
-### Running the Sample Code
-
-All of the code in this document can be either of two ways. It can be typed in the Python shell, which can be opened by simply typing 'python' into your command line interface once you have installed the language:
-
-``` bash
-$ python
-```
-
-Or, the code can be typed into a file with the ending '.py' and run from the command line like so:
-
-``` bash
-$ python my_file.py
-```
 
 <a href="#top" class="top" id="table-of-contents">Top</a>
 ## Table of Contents
@@ -69,7 +53,6 @@ $ python my_file.py
 	- [6.3 Decorator Functions](#decorator)
 	- [6.4 pip/requirements.txt](#pip)
 	- [6.5 List Comprehensions](#listcomprehension)
-	- [6.6 Exercise 6](#exercise6)
 -   [Additional Resources](#additionalresources)
 
 
@@ -962,33 +945,7 @@ things = ["something with " + ITEM for ITEM in old_things if condition_based_on(
 ```
 Note that the list initalization, iteration, and condition checking all occur in the same line. This outputs the same exact list as the for loop above. Everything before the keyword `for` will be each element of list. The for loop takes care of what you'd expect - the iteration. If there's a condition to the list comprehension, it will follow the for loop syntax.
 
-<a id="exercise6"></a>
-### 6.5 Exercise 6
 
-Write a program called `sort.py` that takes in a string of numbers (like `36427478554`), and then prints the string out in the same format, but sorted.
-
-You can sort a list by calling `.sort()` on it: 
-
-```python
-my_array = [3,1,2]
-my_array.sort() # [1,2,3]``
-```
-
-Also, the `int()` and `str()` functions convert to and from strings and ints:
-
-```python
-x = 7
-x_as_string = str(x)
-x == int(x_as_string) # True
-```
-
-Example terminal usage:
-
-```bash
-$ python sort.py 
-Enter the string of numbers: 555987654321
-123455556789
-```
 ___________
 
 <a href="#top" class="top" id="additionalresources">Top</a>
