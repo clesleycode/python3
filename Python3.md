@@ -722,8 +722,6 @@ Write a class called `Human`.  It should have a constructor that takes in a heig
 
 Write an instance method called `get_bmi` that returns the BMI of the human.  Note that BMI is `weight/(height^2) * 703`.
 
-> Having a problem with division?  If you divide two integers in Python, the result will be rounded down to the nearest integer.  Try making the numerator a decimal using the float() function before dividing.
-
 ```python
 # Write the "Human" class here
 
@@ -791,29 +789,6 @@ name = input("What is your name? ")
 
 In name will be stored whatever the user types in. Within the parentheses, you can put a prompt, which is meant to prompt the user to instruct them on what to input.
 
-We can also take command line arguments, which are arguments input on the command line when the file is run. These arguments are stored as a [tuple](#tuples), which can then be packed or unpacked in the same way that we discussed before. For example, say we have the following Python file:
-
-```python
-# Import needed for command line arguments
-from sys import argv
-
-my_script, my_name, my_age = argv
-
-print("Hello %s, you are %s years old." % (my_name, my_age))
-print("This file is called %s." % my_script)
-```
-
-`argv` always takes at least one argument, which is the name of the script. Others can be input and handled within the program, as shown here. This program could be run by typing this in the command line:
-
-```python
-$ python my_script.py Matt 19
-
-"""
-"Hello Matt, you are 19 years old."
-"This file is called my_script.py."
-"""
-```
-
 We can also read from a file to get input from the user:
 
 ```python
@@ -822,7 +797,7 @@ file_name = input("Enter a file name: ")
 # Open the file for reading
 file = open(file_name)
 # Print the contents of the file
-print file.read()
+print (file.read())
 # Remember to close the file
 file.close()
 ```
@@ -840,7 +815,7 @@ However, there is another way to read files that prevents having to close the fi
 ```python
 # 'r' stands for 'read'
 with open('my_file', 'r') as f:
-data = f.read()
+	data = f.read()
 ```
 
 <a id="decorator"></a>
@@ -944,6 +919,16 @@ List comprehensions condense this into one line of code. The previous code would
 things = ["something with " + ITEM for ITEM in old_things if condition_based_on(ITEM)]
 ```
 Note that the list initalization, iteration, and condition checking all occur in the same line. This outputs the same exact list as the for loop above. Everything before the keyword `for` will be each element of list. The for loop takes care of what you'd expect - the iteration. If there's a condition to the list comprehension, it will follow the for loop syntax.
+
+
+<a id="lambdafunctions"></a>
+### 6.6 Lambda Functions
+
+Lambda functions are another way of defining short-hand functions. 
+
+``` python
+x = lambda x: x ** 2
+```
 
 
 ___________
