@@ -930,6 +930,31 @@ Lambda functions are another way of defining short-hand functions.
 x = lambda x: x ** 2
 ```
 
+### 6.7 Operators
+
+The `operators` module provides us with functions that correspond to different arithmetic operations. This is particularly useful in the case of operator mapping. For example, if we have a calculator program that takes an equation as string input, we might try the following:
+
+``` python
+operator_mapping = {
+	'+' : +,
+	'-' : -,
+	'*' : *,
+	'/' : /
+}
+
+But this returns a syntax error! With the `operator` module, we can add these operations as functions, allowing us to easily map:
+
+``` python
+import operator as _operator
+
+operator_mapping = {
+    '+': _operator.add,
+    '-': _operator.sub,
+    '*': _operator.mul,
+    '/': _operator.truediv,
+}
+```
+
 
 ___________
 
@@ -947,7 +972,6 @@ Along with this tutorial, there is a wealth of information available on Python a
 [ADI Resources][learn]
 
 [Codecademy][codecademy]
-
 
 
 [github]: https://github.com/adicu/devfest-webdev
